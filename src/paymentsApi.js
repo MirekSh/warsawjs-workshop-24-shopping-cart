@@ -32,6 +32,7 @@ const processPayment = async (token, card, amount) => {
 
     return response.data.transactionId;
   } catch (error) {
+    //console.log(error);
     switch (error.response.status) {
       case 401:
         throw new Error("Unauthorized");
